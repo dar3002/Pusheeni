@@ -16,10 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - name: Set up .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '3.1.301'
 
  
 
@@ -29,4 +25,4 @@ jobs:
         app-name: 'pusheeni'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_224a9306e554462485e9c6247563558d }}
-        package: ${{env.DOTNET_ROOT}}/myapp 
+        package: ${{env.DOTNET_ROOT}}
